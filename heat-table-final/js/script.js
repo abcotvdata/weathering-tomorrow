@@ -3,6 +3,14 @@
    Date:
 */
 
+$.fn.extend({
+   qcss: function(css) {
+      return $(this).queue(function(next) {
+         $(this).css(css);
+         next();
+      });
+   }
+});
 
 
 $(document).ready(function(){ // begin document.ready block
@@ -95,6 +103,8 @@ $(document).ready(function(){ // begin document.ready block
 						    	$(".table").delay(1000).fadeIn()
 						    	$(".source").delay(1000).fadeIn()
 
+						    	$(".table-section").delay(1000).qcss({"height":"auto"})
+
 				      			$(".zip_code_display").html(zipval)
 
 				    			$(".zip_today_90").html(filtered_zip[0].days_above_90_today)
@@ -135,6 +145,8 @@ $(document).ready(function(){ // begin document.ready block
 							      	console.log(filtered_county)
 
 							      	for (i = 0; i < filtered_county.length; i++) {
+
+							      		$(".table-section").delay(1000).qcss({"height":"auto"})
 
 						      			$(".county_display").html(filtered_county[0].county_name + ', ' + filtered_county[0].state_abbr)
 
@@ -180,7 +192,10 @@ $(document).ready(function(){ // begin document.ready block
 							    	$(".table").delay(1000).fadeIn()
 							    	$(".source").delay(1000).fadeIn()
 
+							    	$(".table-section").delay(1000).qcss({"height":"auto"})
+
 					      			$(".zip_code_display").html(zipval)
+
 
 					    			$(".zip_today_90").html(filtered_zip[0].days_above_90_today)
 					    			$(".zip_30yrs_90").html(filtered_zip[0].days_above_90_30yrs)
@@ -218,6 +233,8 @@ $(document).ready(function(){ // begin document.ready block
 							      	console.log(filtered_county)
 
 							      	for (i = 0; i < filtered_county.length; i++) {
+
+							      		$(".table-section").delay(1000).qcss({"height":"auto"})
 
 						      			$(".county_display").html(filtered_county[0].county_name + ', ' + filtered_county[0].state_abbr)
 

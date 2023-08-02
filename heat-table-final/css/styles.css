@@ -86,8 +86,8 @@ img {
 
 .loading {
   width: 100%;
-  position: relative;
-  top: 5vh;
+  position: absolute;
+  top: 150px;
   z-index: 6000;
   display: none;
 }
