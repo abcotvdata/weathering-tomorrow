@@ -24,14 +24,14 @@ $.fn.extend({
 });
 
 function getHeatColor(d) {
-    return d > 90 ? '#be0000' :
-    d > 80 ? '#da290c' :
-    d > 70 ? '#ea4213' :
-    d > 60 ? '#f95819' :
-    d > 50 ? '#fa791a' :
-    d > 40 ? '#fb991b' :
-    d > 30 ? '#fcc51a' :
-    d > 20 ? '#fcf019' :
+    return d >130 ? '#be0000' :
+    d > 115 ? '#da290c' :
+    d > 100 ? '#ea4213' :
+    d > 85 ? '#f95819' :
+    d > 70 ? '#fa791a' :
+    d > 55 ? '#fb991b' :
+    d > 40 ? '#fcc51a' :
+    d > 25 ? '#fcf019' :
     d > 10 ? '#f6f074' :
     d >= 0 ? '#f0f0cb' :
     d == null ? '#DADADA' :
@@ -495,48 +495,116 @@ $(document).ready(function(){ // begin document.ready block
 	});
 
 
+	// MAP SWITCHY THING
+
+	$(".map1-button").click(function(){
+		$(".map1").css({
+			"opacity":"1",
+			"z-index": "3000"
+		})
+
+		$(".map2").css({
+			"opacity":"0",
+			"z-index": "0"
+		})
+
+		$(this).css({
+			"background-color": "#fb991b",
+  			"color": "white",
+  			"box-shadow": '-1px 1px 5px #676767'
+		})
+
+		$(".map2-button").css({
+			"background-color": "#b1b7ba",
+  			"color": "black",
+  			"box-shadow":"none"
+		})
+	});
+
+	$(".map2-button").click(function(){
+		$(".map2").css({
+			"opacity":"1",
+			"z-index": "3000"
+		})
+
+		$(".map1").css({
+			"opacity":"0",
+			"z-index": "0"
+		})
+
+		$(this).css({
+			"background-color": "#fb991b",
+  			"color": "white",
+  			"box-shadow": '-1px 1px 5px #676767'
+		})
+
+		$(".map1-button").css({
+			"background-color": "#b1b7ba",
+  			"color": "black",
+  			"box-shadow":"none"
+		})
+	});
+
+
 	//CAROUSEL OF STORIES
 
 	$.get('https://raw.githubusercontent.com/abcotvdata/climate-stories/main/stories.csv', function(csvString) {
 
-			var url = (window.location != window.parent.location)
-            ? document.referrer
-            : document.location.href;
+		var url = (window.location != window.parent.location)
+        ? document.referrer
+        : document.location.href;
 
-            console.log(url)
+        console.log(url)
 
-			// Use PapaParse to convert string to array of objects
-	    	var stories = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
+		// Use PapaParse to convert string to array of objects
+    	var stories = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
 
-	    	stories = stories.filter(function(obj) {
-	        	// return the filtered value
-	        	return obj.national_slug !== "extreme-heat";
-	      	});
+    	stories = stories.filter(function(obj) {
+        	// return the filtered value
+        	return obj.national_slug !== "climate-perspectives";
+      	});
 
-	    	for (i = 0; i < stories.length; i++) {
+    	// console.log(stories)
 
-	    		var type = stories[i].type
+    	for (i = 0; i < stories.length; i++) {
 
-	    		if (type == "national") {
+    		var type = stories[i].type
 
-	    			var link = url + stories[i].story_link
+    		if (type == "national") {
 
-		    		console.log(link)
+    			var link = url + stories[i].story_link
 
-		    		// console.log(link)
+	    		console.log(link)
 
-		    		$(".carousel-row").append('<div class="carousel-tile story'+[i]+'"><a href="'+link+'" target="_blank"><img src="'+stories[i].story_img+'"><div class="story-title"><p>'+stories[i].story_title+'</p></div></a></div>')
+	    		// console.log(link)
 
-	    		} else if (type == "local") {
+	    		$(".carousel-row-abc").append('<div class="carousel-tile story'+[i]+'"><a href="'+link+'" target="_blank"><img src="'+stories[i].story_img+'"><div class="story-title"><div class="story-logo story-logo-abc"><img src="img/ABC_OTV_logo_dark_blue.png"></div><p>'+stories[i].story_title+'</p></div></a></div>')
 
-	    			$(".carousel-row").append('<div class="carousel-tile story'+[i]+'"><a href="'+stories[i].story_link+'" target="_blank"><img src="'+stories[i].story_img+'"><div class="story-title"><p>'+stories[i].story_title+'</p></div></a></div>')
+    		} else if (type == "local") {
 
-	    		}
+    			$(".carousel-row-abc").append('<div class="carousel-tile story'+[i]+'"><a href="'+stories[i].story_link+'" target="_blank"><img src="'+stories[i].story_img+'"><div class="story-title"><div class="story-logo story-logo-abc"><img src="img/ABC_OTV_logo_dark_blue.png"></div><p>'+stories[i].story_title+'</p></div></a></div>')
 
-	    		
-	    	}
+    		}
 
-	    });
+    		
+    	}
+
+    });
+
+	$.get('https://raw.githubusercontent.com/abcotvdata/climate-stories/main/the-cool-down-stories.csv', function(csvString) {
+
+		// Use PapaParse to convert string to array of objects
+    	var stories = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
+
+    	// console.log(stories)
+
+    	for (i = 0; i < stories.length; i++) {
+
+    		$(".carousel-row-tcd").append('<div class="carousel-tile story'+[i]+'"><a href="'+stories[i].story_link+'" target="_blank"><img src="'+stories[i].story_img+'"><div class="story-title"><div class="story-logo story-logo-tcd"><img src="img/tcd-globe-blue-EDIT.png"></div><p>'+stories[i].story_title+'</p></div></a></div>')
+
+    	}
+
+    });
 
 
 	// TABLE STUFF
