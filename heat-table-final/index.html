@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weathering Tomorrow - Heat increase table</title>
+
+	<!-- viewport for responsive -->	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<!-- CSS stylesheets -->	
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="css/jqueryui.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.typekit.net/jpw5sme.css">
+    <link href="css/carousel.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+    <div class="content-menu story-page-menu">
+        <div class="menu-logo">
+            <img src="img/weathering-tomorrow-logo.png">
+        </div>
+
+    </div> <!-- END MENU -->
+
+    <div class="table-section">
+
+        <div class="headline">
+            <h1>How much hotter will it get where you live?</h1>
+        </div>
+
+
+        <div class="zip-code">
+        	<input type="text" placeholder="Type in your zip code..." class="zip-input"><button class="zip-go">Go</button>
+
+        	<label for="county" id="county-label">Choose a county:</label>
+    		<select name="county" id="counties">
+    		</select>	
+            <button class="county-go">Go</button>
+
+        </div>
+
+        <div class="tryagain">
+          <div class="tryagaintext">
+
+            <h2>Error!</h2>
+            <p>Please type a valid zip code</p>
+
+            <button class="button" id="oktryagain">OK</button>
+
+          </div>
+        </div>
+
+        <div class="table">
+        	
+        	<div class="row zip">
+
+                <div class="table-title-box">
+                    <div class="risk-video-wrap">
+                            <div class="risk-video-outline">
+                                <div class="risk-video">
+                                    <img src="img/cracked-ground-2.jpg">
+                                </div>
+                            </div>
+                            
+                    </div>
+                    <div class="table-title">
+                        <div>Zip code <br> <span class="zip_code_display"></span></div>
+                    </div>
+                </div>
+        		
+
+
+        		<div class="data">
+
+        			<div class="days days_90">
+        				<div class="label label_90">Days above <span class="deg_90">90&deg;</span></div>
+
+                        <div class="boxes">
+            				<div class="today_box">
+            					<div class="today today_90 zip_today_90"></div><div class="days_today_label">days today</div>
+            				</div>
+
+            				<div class="yrs30_box">
+            					<div class="yrs30 yrs30_90 zip_30yrs_90"></div><div class="days_30yrs_label">days in 2050</div>
+            				</div>
+
+            				<div class="more_days_box">
+            					<div class="more_days more_days_90 zip_more_days_90"></div><div class="more_days_label">more days</div>
+            				</div>
+                        </div>
+        				
+        			</div>
+
+        			<div class="days days_100">
+        				<div class="label label_100">Days above <span class="deg_100">100&deg;</span></div>
+
+        				<div class="boxes">
+                            <div class="today_box">
+            					<div class="today today_100 zip_today_100"></div><div class="days_today_label">days today</div>
+            				</div>
+
+            				<div class="yrs30_box">
+            					<div class="yrs30 yrs30_100 zip_30yrs_100"></div><div class="days_30yrs_label">days in 2050</div>
+            				</div>
+
+            				<div class="more_days_box">
+            					<div class="more_days more_days_100 zip_more_days_100"></div><div class="more_days_label">more days</div>
+            				</div>
+                        </div>
+        				
+        			</div>
+
+
+        		</div>
+
+        	</div> <!-- end row zip -->
+
+
+        	<div class="row county">
+
+                <div class="table-title-box">
+                    <div class="risk-video-wrap">
+                            <div class="risk-video-outline">
+                                <div class="risk-video">
+                                    <img src="img/cracked-ground-2.jpg">
+                                </div>
+                            </div>
+                            
+                    </div>
+                    <div class="table-title">
+                        <div>County <br> <span class="county_display"></span></div>
+                    </div>
+                </div>
+        		
+        		<!-- <div class="title">
+        			<div>County <br> <span class="county_display">NAME</span></div>
+        		</div> -->
+
+        		<div class="data">
+
+        			<div class="days days_90">
+        				<div class="label label_90">Days above <span class="deg_90">90&deg;</span></div>
+
+        				<div class="boxes">
+                            <div class="today_box">
+            					<div class="today today_90 county_today_90"></div><div class="days_today_label">days today</div>
+            				</div>
+
+            				<div class="yrs30_box">
+            					<div class="yrs30 yrs30_90 county_30yrs_90"></div><div class="days_30yrs_label">days in 2050</div>
+            				</div>
+
+            				<div class="more_days_box">
+            					<div class="more_days more_days_90 county_more_days_90"></div><div class="more_days_label">more days</div>
+            				</div>
+                        </div>
+        				
+        			</div>
+
+        			<div class="days days_100">
+        				<div class="label label_100">Days above <span class="deg_100">100&deg;</span></div>
+
+        				<div class="boxes">
+                            <div class="today_box">
+            					<div class="today today_100 county_today_100"></div><div class="days_today_label">days today</div>
+            				</div>
+
+            				<div class="yrs30_box">
+            					<div class="yrs30 yrs30_100 county_30yrs_100"></div><div class="days_30yrs_label">days in 2050</div>
+            				</div>
+
+            				<div class="more_days_box">
+            					<div class="more_days more_days_100 county_more_days_100"></div><div class="more_days_label">more days</div>
+            				</div>
+                        </div>
+        				
+        			</div>
+
+
+        		</div>
+
+        	</div> <!-- end row zip -->
+
+        </div> <!-- end table -->
+
+        <div class="source">
+            <p>Source: <a href="https://firststreet.org/" target="_blank">First Street Foundation</a></p>
+        </div>
+        
+    </div>
+
+
+    <div class="carousel-section">
+
+            <div class="content-header">
+                <!-- <h3>More <span class="wt-logo-small"><img src="img/weathering-tomorrow-logo.png"></span> stories:</h3> -->
+                <h3>See more reporting on the impacts of climate change from ABC Owned Television Stations</h3>
+            </div>  
+            
+            <div class="carousel">
+                <div class="carousel-row"></div>
+            </div> 
+
+        </div>
+
+
+    <div class="loading">
+        <div class="loading-content">
+            <div class="loading-icon">
+                <img src="img/CLOUD-SPIN-LOADING.gif">
+            </div>
+            <div class="loading-text">Loading...</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- JAVASCRIPT -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jqueryui.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+	<script src="js/script.js"></script>
+  </body>
+</html>
+
+
+<!-- photos courtesy of Sarah Soutoul (copyright) -->
+<!-- soar.mp4 courtesy of Keith Plocek (copyright) -->
