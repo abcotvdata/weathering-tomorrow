@@ -600,7 +600,7 @@ $(document).ready(function(){ // begin document.ready block
 
     	for (i = 0; i < stories.length; i++) {
 
-    		$(".carousel-row-tcd").append('<div class="carousel-tile story'+[i]+'"><a href="'+stories[i].story_link+'" target="_blank"><img src="'+stories[i].story_img+'"><div class="story-title"><div class="story-logo story-logo-tcd"><img src="img/tcd-globe-blue-EDIT.png"></div><p>'+stories[i].story_title+'</p></div></a></div>')
+    		$(".carousel-row-tcd").append('<div class="carousel-tile story'+[i]+'"><a href="'+stories[i].story_link+'" target="_blank"><img src="'+stories[i].story_img+'"><div class="story-title"><div class="story-logo story-logo-tcd"><img src="img/tcd-social-blue-EDIT.png"></div><p>'+stories[i].story_title+'</p></div></a></div>')
 
     	}
 

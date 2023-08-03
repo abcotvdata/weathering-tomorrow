@@ -49,6 +49,16 @@ body {
   /*background-color: black;*/
 }
 
+a {
+  color: #1469be;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1469be;
+  text-decoration: none;
+}
+
 .header-bg-overlay {
    width: 100%;
    height: 100vh;
@@ -817,13 +827,13 @@ body {
   color: #253444;
 }
 
-.map-subheader a {
+/*.map-subheader a {
       color: #00318b;
     }
 
     .map-subheader a:visited {
       color: #00318b;
-    }
+    }*/
 
 .map-legend {
   margin-top: 60px;
@@ -1232,13 +1242,13 @@ body {
     font-size: 20px;
   }
 
-  .popup-content a {
+/*  .popup-content a {
     color: #00318b;
   }
 
   .popup-content a:visited {
     color: #00318b;
-  }
+  }*/
 
 .exit {
   position: absolute;
