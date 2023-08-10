@@ -5,6 +5,13 @@
 
 //zip search option on map
 
+//convert to digits
+$.fn.digits = function(){ 
+    return this.each(function(){ 
+        $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+    })
+}
+
 $.fn.extend({
    qcss: function(css) {
       return $(this).queue(function(next) {
@@ -590,7 +597,7 @@ $(document).ready(function(){
 			return obj.properties.state === leftPad(String(picked_state_fips), 2);
 			});
 
-         	// console.log(items)
+         	console.log(items)
 
          	function majorStyle(feature) {
 			    return {
@@ -656,6 +663,7 @@ $(document).ready(function(){
 
         	var items_boundary = data;
 
+        	console.log(data)
 
 			items_boundary = data.features.filter(function(obj) {
 			// return the filtered value
