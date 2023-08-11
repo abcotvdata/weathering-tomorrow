@@ -1297,6 +1297,7 @@ a:visited {
 
 .story-headline h2 {
   margin: 65px 0px 15px 0px;
+  font-size: 50px;
 }
 
 .story-headline p {
@@ -1351,17 +1352,20 @@ a:visited {
   max-width: 800px;
   /*background-color: white;*/
   margin: auto;
-  font-family: serif;
-  font-size: 20px;
+  font-family: sans-serif;
+  font-size: 16px;
+  
   
 }
 
 .story-text p {
   padding: 0px 25px;
+  line-height: 22px;
 }
 
 .story-text ul {
-  padding-left: 100px;
+  padding-left: 80px;
+  line-height: 22px;
 }
 
 .drop-cap {
@@ -1371,9 +1375,10 @@ a:visited {
   color: #fb991b;
   float: left;
   position: relative;
-  top: -12px;
+  top: 20px;
   text-shadow: -1px 1px 5px #b1b7ba;
   padding-right: 5px;
+  padding-bottom: 25px;
 }
 
 .highlight {
@@ -1433,6 +1438,10 @@ a:visited {
   z-index: 3000;
   box-shadow: -1px 1px 5px #b1b7ba;
 
+}
+
+.pull-quote p {
+  line-height: 30px;
 }
 
 .pull-quote-wrap {
@@ -1537,6 +1546,10 @@ a:visited {
 
 }
 
+.img-embed-mobile {
+  display: none;
+}
+
 .embed-title {
   font-family: "neuzeit-grotesk", sans-serif;
 }
@@ -1551,6 +1564,7 @@ a:visited {
   font-size: 15px;
   color: #253444;
   padding: 0px;
+  line-height: 18px;
 }
 
 .switch-buttons {
@@ -1980,7 +1994,7 @@ a:visited {
   /*background-color: white;*/
   z-index: 1000;
   position: relative;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -2115,6 +2129,19 @@ a:visited {
 #heat_map_1 {
   width: 100%;
   height: 100vh;
+  position: relative;
+}
+
+.scrolly-map {
+  position: absolute;
+  top: 120px;
+  left: 0px;
+  width: 100%;
+  opacity: 0;
+}
+
+.scrolly-map1 {
+  opacity: 1;
 }
 
 .leaflet-labels-pane {
@@ -2160,14 +2187,21 @@ a:visited {
   /*border: 2px solid hotpink;*/
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 
-.scrolly-box-2 {
-  height: 150vh;
+.scrolly-box-7 {
+  height: 50vh;
 }
 
-.scrolly-box-6 {
+/*.scrolly-box-6 {
   height: 150vh;
+}*/
+
+.outer-scrolly-text {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
 }
 
 .scrolly-text {
@@ -2178,8 +2212,6 @@ a:visited {
   background-color: rgba(255, 255, 255, 0.8);
   /*box-shadow: 2px 2px 5px black;*/
   box-shadow: -1px 1px 5px #b1b7ba;
-  position: relative;
-  top: 60vh;
   font-family: "neuzeit-grotesk", sans-serif;
   font-size: 20px;
 
@@ -2535,14 +2567,82 @@ a:visited {
 
   .pull-quote {
     height: 300px;
+    font-size: 25px;
   }
 
   .right-quote {
     bottom: 135px;
   }
 
+  .attribution {
+    margin-left: 5px;
+  }
+
   .map-embed {
     height: 430px;
+  }
+
+  .scrolly-text {
+    padding: 10px;
+  }
+
+  .scrolly-map-title {
+    font-size: 15px;
+    left: 20px;
+  }
+
+  .scrolly-map-legend-bar {
+    height: 15px;
+  }
+
+  .scrolly-map-legend-labels {
+    top: 15px;
+  }
+
+  .high {
+    right: 0px;
+  }
+
+  .story-text p {
+    padding: 0px 0px;
+  }
+
+  .story-text-subheader {
+    padding: 0px 0px;
+    font-size: 23px;
+  }
+
+  .story-text ul {
+    padding-left: 25px;
+  }
+
+  .story-text-sub-sub {
+    padding: 0px 0px;
+  }
+
+  .embed-title h4 {
+    font-size: 23px;
+  }
+
+  .img-embed-mobile {
+    display: block;
+  }
+
+  .img-embed-desktop {
+    display: none;
+  }
+
+  .story-page-menu {
+    top: 5vh;
+  }
+
+  .story-headline {
+    top: 5vh;
+  }
+
+  .story-headline h2 {
+    margin: 30px 0px 15px 0px;
+    font-size: 35px;
   }
 
 
@@ -2577,6 +2677,14 @@ a:visited {
 
   .switch-buttons {
     font-size: 15px;
+  }
+
+  .story-headline h2 {
+    font-size: 27px;
+  }
+
+  .byline {
+    font-size: 13px;
   }
 
 }

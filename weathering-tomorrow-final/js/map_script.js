@@ -322,7 +322,7 @@ $(document).ready(function(){
 		$(".wind-tab").css({"background-color":"#b1b7ba"})
 
 		$(".risk_type_title").html("flooding");
-		$(".risk_definition").html("Major risk means a property is forecast to have an 80% percent chance of flooding once over 30 years. Severe risk means at least a 95% chance.");
+		$(".risk_definition").html("Major risk means a property is forecast to have an 80% percent chance of flooding once over 30 years. Severe risk means at least a 99% chance.");
 
 	}
 
