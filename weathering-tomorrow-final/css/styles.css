@@ -2127,7 +2127,8 @@ a:visited {
   .high { right: 35px; }
 
 #heat_map_1 {
-  width: 100%;
+  max-width: 950px;
+  margin: auto;
   height: 100vh;
   position: relative;
 }
@@ -2138,6 +2139,7 @@ a:visited {
   left: 0px;
   width: 100%;
   opacity: 0;
+
 }
 
 .scrolly-map1 {
@@ -2607,7 +2609,7 @@ a:visited {
     padding: 0px 0px;
   }
 
-  .story-text-subheader {
+  .story-text-subheader, .video-title {
     padding: 0px 0px;
     font-size: 23px;
   }
@@ -2643,6 +2645,20 @@ a:visited {
   .story-headline h2 {
     margin: 30px 0px 15px 0px;
     font-size: 35px;
+  }
+
+  .video {
+    width: 95%;
+    padding-top: 53%;
+
+  }
+
+  .table-headline h1 {
+    font-size: 30px;
+  }
+
+  .pull-quote p {
+    padding: 0px 20px;
   }
 
 
