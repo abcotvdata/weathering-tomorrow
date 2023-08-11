@@ -966,12 +966,14 @@ $("#zip_mapbutton").click(function(){
 	$(".map-tab").click(function(){
 		var tab_risk_type = $(this).attr("risk_type")
 		var tab_risk_type_long = $(this).attr("risk_type_long")
+		var tab_risk_description = $(this).attr("risk_description")
 		risk_type = tab_risk_type
 
 		$(this).css({"background-color":"#fb991b", "color":"white", "box-shadow":"0px 0px 3px #b1b7ba"})
 		$(".map-tab").not(this).css({"background-color":"#b1b7ba", "box-shadow":"none", "color":"black"})
 
 		$(".risk_type_title").html(tab_risk_type_long);
+		$(".risk_definition").html(tab_risk_description);
 
 		console.log(risk_type)
 
