@@ -450,10 +450,10 @@ a:visited {
 }
 
 .video {
-  width: 70%;
+  width: 100%;
   height: 0px;
   margin: auto;
-  padding-top: 39%;
+  padding-top: 56%;
   position: relative;
   background-color: white;
 }
@@ -1387,7 +1387,7 @@ a:visited {
   text-shadow: -1px 1px 5px #b1b7ba;
 }
 
-.story-text-subheader, .video-title{
+.story-text-subheader{
   /*font-family: serif;*/
   font-family: "neuzeit-grotesk", sans-serif;
   font-weight: 500;
@@ -1416,10 +1416,18 @@ a:visited {
   }
 
 .video-title {
+  font-family: "neuzeit-grotesk", sans-serif;
+  font-weight: 700;
+  text-shadow: -1px 1px 5px #b1b7ba;
+  font-size: 25px;
+  text-align: left;
+  color: #253444;
   margin: auto;
+  margin-top: 0px;
   margin-bottom: 20px;
-  max-width: 750px;
-  border-bottom: 3px solid #fb991b;
+  max-width: 800px;
+  /*border-bottom: 3px solid #fb991b;*/
+  padding: 0px;
 }
 
 /*PULL QUOTE STYLING*/
@@ -1558,6 +1566,7 @@ a:visited {
   font-size: 25px;
   color: #253444;
   margin: 5px 0px;
+  text-shadow: -1px 1px 5px #b1b7ba;
 }
 
 .embed-title p {
@@ -2647,11 +2656,6 @@ a:visited {
     font-size: 35px;
   }
 
-  .video {
-    width: 95%;
-    padding-top: 53%;
-
-  }
 
   .table-headline h1 {
     font-size: 30px;
