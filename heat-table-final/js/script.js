@@ -289,6 +289,11 @@ $(document).ready(function(){ // begin document.ready block
 			// Use PapaParse to convert string to array of objects
 	    	var stories = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
 
+	    	stories = stories.filter(function(obj) {
+	        	// return the filtered value
+	        	return obj.national_slug !== "heat-calc";
+	      	});
+
 	    	// console.log(stories)
 
 	    	for (i = 0; i < stories.length; i++) {
