@@ -577,7 +577,6 @@ $(document).ready(function(){
 	        scrollTop: $(".header").offset().top
 	    }, 1000).delay(1000);
 
-	    $("body").css({"overflow":"hidden"})
 
 
 		$(".content-menu").css({
