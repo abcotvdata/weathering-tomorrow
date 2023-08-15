@@ -218,18 +218,22 @@ $(document).ready(function(){
 	//_______________________________MAP PAGE HEADER____________________________________
 
 	var queryString = location.search.substring(1);
-	// console.log(queryString)
+	console.log(queryString)
 
 	var string_split = queryString.split("|");
-	// console.log(string_split)
+	console.log(string_split)
 
-	var geo_type = string_split[0];
+	var geo_type = string_split[1];
 	console.log(geo_type)
 
 	var risk_type = ""
-	risk_type = string_split[1];
-
+	risk_type = string_split[2];
 	console.log(risk_type)
+
+	var base_url = string_split[0];
+	console.log(base_url)
+
+	
 
 
 	
@@ -341,7 +345,7 @@ $(document).ready(function(){
 
 	if (geo_type == "state") {
 
-		picked_state_fips = string_split[2];
+		picked_state_fips = string_split[3];
 		// console.log(picked_state_fips)
 
 
@@ -360,8 +364,8 @@ $(document).ready(function(){
 	} else if (geo_type == "county") {
 
 
-		picked_state_fips = string_split[2];
-		picked_county_fips = string_split[3];
+		picked_state_fips = string_split[3];
+		picked_county_fips = string_split[4];
 		console.log(picked_state_fips)
 		console.log(picked_county_fips)
 
@@ -389,9 +393,9 @@ $(document).ready(function(){
 
 	} else if (geo_type == "zip") {
 
-		picked_state_fips = string_split[2];
-		picked_county_fips = string_split[3];
-		picked_zip = string_split[4];
+		picked_state_fips = string_split[3];
+		picked_county_fips = string_split[4];
+		picked_zip = string_split[5];
 		console.log(picked_state_fips)
 		console.log(picked_county_fips)
 		console.log(picked_zip)
@@ -478,7 +482,7 @@ $(document).ready(function(){
 
 	if (geo_type == "state") {
 
-		picked_state_fips = string_split[2];
+		picked_state_fips = string_split[3];
 		console.log(picked_state_fips)
 
 		var url = "https://raw.githubusercontent.com/abcotvdata/climate_risk_factors/main/data_geojson/" + risk_type + "tracts_"+leftPad(String(picked_state_fips), 2)+".geojson"
@@ -574,8 +578,8 @@ $(document).ready(function(){
 	} else if (geo_type == "county") {
 
 
-		picked_state_fips = string_split[2];
-		picked_county_fips = string_split[3];
+		picked_state_fips = string_split[3];
+		picked_county_fips = string_split[4];
 		console.log(picked_state_fips)
 		console.log(picked_county_fips)
 
@@ -707,9 +711,9 @@ $(document).ready(function(){
 
 	} else if (geo_type == "zip") {
 
-		picked_state_fips = string_split[2];
-		picked_county_fips = string_split[3];
-		picked_zip = string_split[4];
+		picked_state_fips = string_split[3];
+		picked_county_fips = string_split[4];
+		picked_zip = string_split[5];
 		console.log(picked_state_fips)
 		console.log(picked_county_fips)
 		console.log(picked_zip)
@@ -982,7 +986,7 @@ $("#zip_mapbutton").click(function(){
 
 		if (geo_type == "state") {
 
-			picked_state_fips = string_split[2];
+			picked_state_fips = string_split[3];
 			console.log(picked_state_fips)
 
 			var url = "https://raw.githubusercontent.com/abcotvdata/climate_risk_factors/main/data_geojson/" + risk_type + "tracts_"+leftPad(String(picked_state_fips), 2)+".geojson"
@@ -1078,8 +1082,8 @@ $("#zip_mapbutton").click(function(){
 		} else if (geo_type == "county") {
 
 
-			picked_state_fips = string_split[2];
-			picked_county_fips = string_split[3];
+			picked_state_fips = string_split[3];
+			picked_county_fips = string_split[4];
 			console.log(picked_state_fips)
 			console.log(picked_county_fips)
 
@@ -1212,9 +1216,9 @@ $("#zip_mapbutton").click(function(){
 
 		} else if (geo_type == "zip") {
 
-			picked_state_fips = string_split[2];
-			picked_county_fips = string_split[3];
-			picked_zip = string_split[4];
+			picked_state_fips = string_split[3];
+			picked_county_fips = string_split[4];
+			picked_zip = string_split[5];
 			console.log(picked_state_fips)
 			console.log(picked_county_fips)
 			console.log(picked_zip)
@@ -1379,10 +1383,6 @@ $("#zip_mapbutton").click(function(){
 
         console.log(url)
 
-        url2 = window.parent.location;
-
-        console.log(url2)
-
 		// Use PapaParse to convert string to array of objects
     	var stories = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
 
@@ -1399,7 +1399,7 @@ $("#zip_mapbutton").click(function(){
 
     		if (type == "national") {
 
-    			var link = url + stories[i].story_link
+    			var link = base_url + stories[i].story_link
 
 	    		console.log(link)
 
