@@ -59,6 +59,14 @@ a:visited {
   text-decoration: none;
 }
 
+/*delete this if it doesn't work!*/
+
+.main-container {
+  min-height: 724px;
+}
+
+/*delete this if it doesn't work!*/
+
 .header-bg-overlay {
    width: 100%;
    height: 100vh;
