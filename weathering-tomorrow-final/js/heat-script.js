@@ -217,7 +217,7 @@ $(document).ready(function(){ // begin document.ready block
 
     	stories = stories.filter(function(obj) {
         	// return the filtered value
-        	return obj.national_slug !== "climate-perspectives";
+        	return obj.national_slug !== "extreme-heat";
       	});
 
     	// console.log(stories)
