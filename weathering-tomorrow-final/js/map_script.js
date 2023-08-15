@@ -1379,6 +1379,10 @@ $("#zip_mapbutton").click(function(){
 
         console.log(url)
 
+        url2 = parent.document.URL;
+
+        console.log(url2)
+
 		// Use PapaParse to convert string to array of objects
     	var stories = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
 
