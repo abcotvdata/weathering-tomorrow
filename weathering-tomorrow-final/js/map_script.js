@@ -1379,7 +1379,7 @@ $("#zip_mapbutton").click(function(){
 
         console.log(url)
 
-        url2 = parent.document.URL;
+        url2 = window.parent.location;
 
         console.log(url2)
 
