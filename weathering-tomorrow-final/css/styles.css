@@ -2012,12 +2012,12 @@ a:visited {
   /*background-color: white;*/
   z-index: 1000;
   position: relative;
-  max-width: 1700px;
+  max-width: 2500px;
   margin: auto;
 }
 
 .carousel-section-tcd {
-  max-width: 100%;
+  max-width: 2500px;
 }
 
 .carousel-section .content-header h3{
