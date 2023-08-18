@@ -19,6 +19,9 @@ console.log(base_url)
 if (base_url.indexOf('?') > -1) {
 	console.log("?")
 
+	var URLorigin = window.location.href.split('?')[0];
+	console.log(URLorigin)
+
 	var URLqueryString = location.search;
 	console.log(URLqueryString)
 
