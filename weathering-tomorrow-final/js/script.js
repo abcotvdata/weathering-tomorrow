@@ -19,10 +19,10 @@ console.log(base_url)
 if (base_url.indexOf('?') > -1) {
 	console.log("?")
 
-	var URLorigin = window.location.href.split('?')[0];
+	var URLorigin = window.location.href.split('|')[0];
 	console.log(URLorigin)
 
-	var URLqueryString = location.search;
+	var URLqueryString = location.search.substring(1);
 	console.log(URLqueryString)
 
 	var URLstring_split = URLqueryString.split("|");
