@@ -18,6 +18,14 @@ console.log(base_url)
 
 if (base_url.indexOf('?') > -1) {
 	console.log("?")
+
+	var URLqueryString = location.search.substring(1);
+	console.log(URLqueryString)
+
+	var URLstring_split = URLqueryString.split("|");
+	console.log(URLstring_split)
+
+
 } else {
 	console.log("no ?")
 }
