@@ -359,7 +359,7 @@ $(document).ready(function(){
       	console.log(picked_state_name)
 
       	$(".content-location").html(picked_state_name)
-      	$(".link-to-results").attr('href', 'index.html?state|'+picked_state_fips+"|"+picked_state_name+"|"+base_url+"|"+base_url)
+      	$(".link-to-results").attr('href', 'index.html?state|'+picked_state_fips+"|"+picked_state_name+"|"+base_url)
 
 	} else if (geo_type == "county") {
 
