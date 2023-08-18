@@ -359,7 +359,7 @@ $(document).ready(function(){
       	console.log(picked_state_name)
 
       	$(".content-location").html(picked_state_name)
-      	$(".link-to-results").attr('href', 'index.html?state|'+picked_state_fips+"|"+picked_state_name)
+      	$(".link-to-results").attr('href', 'index.html?state|'+picked_state_fips+"|"+picked_state_name+"|"+base_url+"|"+base_url)
 
 	} else if (geo_type == "county") {
 
@@ -387,7 +387,7 @@ $(document).ready(function(){
           	picked_county = filter_counties[0].county_name
 
           	$(".content-location").html(picked_county + ', ' + picked_state_name)
-          	$(".link-to-results").attr('href', 'index.html?county|'+picked_state_fips+"|"+picked_state_name+"|"+picked_county_fips+"|"+picked_county)
+          	$(".link-to-results").attr('href', 'index.html?county|'+picked_state_fips+"|"+picked_state_name+"|"+picked_county_fips+"|"+picked_county+"|"+base_url)
 
 	    });
 
@@ -438,7 +438,7 @@ $(document).ready(function(){
 	          	console.log(filter_zips)
 
 	          	$(".content-location").html(picked_zip +' - '+ picked_county + ', ' + picked_state_name)
-	          	$(".link-to-results").attr('href', 'index.html?zip|'+picked_state_fips+"|"+picked_state_name+"|"+picked_county_fips+"|"+picked_county+"|"+picked_zip)
+	          	$(".link-to-results").attr('href', 'index.html?zip|'+picked_state_fips+"|"+picked_state_name+"|"+picked_county_fips+"|"+picked_county+"|"+picked_zip+"|"+base_url)
 
 			});
 
