@@ -1064,13 +1064,13 @@ a:visited {
   /*height: 100vh;*/
   position: fixed;
   z-index: 7005;
+  top: 30vh;
 }
 
   .loading-content {
     width: 350px;
     margin: auto;
     position: relative;
-    top: 30vh;
     font-family: "neuzeit-grotesk", sans-serif;
     font-weight: 400;
     font-size: 14px;
