@@ -42,21 +42,7 @@ var picked_zip;
 var which_gobutton;
 
 
-// COLORS FOR MAP____________________________
 
-// function getColor(d) {
-//     return d > 90 ? '#0d0787' :
-//     d > 80 ? '#6703a5' :
-//     d > 70 ? '#8b169a' :
-//     d > 60 ? '#ac2790' :
-//     d > 50 ? '#c2407d' :
-//     d > 40 ? '#d8586a' :
-//     d > 30 ? '#f38a47' :
-//     d > 20 ? '#fbbf2b' :
-//     d > 10 ? '#f5dd27' :
-//     d > 0.001 ? '#f0f723' :
-//     '#DADADA'
-// }
 
 function getColor(d) {
     return d > 90 ? '#be0000' :

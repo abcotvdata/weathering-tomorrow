@@ -1,7 +1,4 @@
-/* script.js 
-   Author:
-   Date:
-*/
+
 
 //padding
 function leftPad(value, length) { 
