@@ -19,13 +19,13 @@ console.log(base_url)
 if (base_url.indexOf('?') > -1) {
 	console.log("?")
 
-	var base_url = window.location.href.split('|').pop();
+	var base_url = window.location.href.split('%7C').pop();
 	console.log(base_url)
 
 	var URLqueryString = location.search.substring(1);
 	console.log(URLqueryString)
 
-	var URLstring_split = URLqueryString.split("|");
+	var URLstring_split = URLqueryString.split("%7C");
 	console.log(URLstring_split)
 
 
@@ -46,7 +46,7 @@ var which_gobutton;
 var queryString = location.search.substring(1);
 console.log(queryString)
 
-var string_split = queryString.split("|");
+var string_split = queryString.split("%7C");
 console.log(string_split)
 
 
@@ -418,7 +418,7 @@ $(document).ready(function(){
 		          		$(".fire-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Wildfire</span><br><span class="big-numb bold wildfire-risk-major">NO DATA</span><br><span class="of-properties-fire-major">available for this area</span>')
 		          	} else {
 
-		          		$(".fire-map-link").attr("href", "risk-maps.html?county|fire|"+picked_state_fips+"|"+picked_county_fips+"|"+base_url)
+		          		$(".fire-map-link").attr("href", "risk-maps.html?county%7Cfire%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+base_url)
 
 		          		if (filtered_data[0].pct_major == 0) {
 			          		$(".wildfire-risk-major").html('NO')
@@ -461,7 +461,7 @@ $(document).ready(function(){
 		          		$(".heat-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Heat</span><br><span class="big-numb bold heat-risk-major">NO DATA</span><br><span class="of-properties-heat-major">available for this area</span>')
 		          	} else {
 
-		          		$(".heat-map-link").attr("href", "risk-maps.html?county|heat|"+picked_state_fips+"|"+picked_county_fips+"|"+base_url)
+		          		$(".heat-map-link").attr("href", "risk-maps.html?county%7Cheat%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+base_url)
 
 		          		if (filtered_data[0].pct_major == 0) {
 			          		$(".heat-risk-major").html('NO')
@@ -507,7 +507,7 @@ $(document).ready(function(){
 		          		$(".flood-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Flooding</span><br><span class="big-numb bold flood-risk-major">NO DATA</span><br><span class="of-properties-flood-major">available for this area</span>')
 		          	} else {
 
-		          		$(".flood-map-link").attr("href", "risk-maps.html?county|flood|"+picked_state_fips+"|"+picked_county_fips+"|"+base_url)
+		          		$(".flood-map-link").attr("href", "risk-maps.html?county%7Cflood%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+base_url)
 
 		          		if (filtered_data[0].pct_major == 0) {
 			          		$(".flood-risk-major").html('NO')
@@ -570,7 +570,7 @@ $(document).ready(function(){
 			          		$(".wind-risk-severe").html(filtered_data[0].pct_severe + '%')
 			          	}
 
-			          	$(".wind-map-link").attr("href", "risk-maps.html?county|wind|"+picked_state_fips+"|"+picked_county_fips+"|"+base_url)
+			          	$(".wind-map-link").attr("href", "risk-maps.html?county%7Cwind%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+base_url)
 
 		          	}
 
@@ -711,7 +711,7 @@ $(document).ready(function(){
           		$(".fire-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Wildfire</span><br><span class="big-numb bold wildfire-risk-major">NO DATA</span><br><span class="of-properties-fire-major">available for this area</span>')
           	} else {
 
-          		$(".fire-map-link").attr("href", "risk-maps.html?state|fire|"+picked_state_fips+"|"+base_url)
+          		$(".fire-map-link").attr("href", "risk-maps.html?state%7Cfire%7C"+picked_state_fips+"%7C"+base_url)
 
           		if (filtered_data[0].pct_major == 0) {
 	          		$(".wildfire-risk-major").html('NO')
@@ -756,7 +756,7 @@ $(document).ready(function(){
           		$(".heat-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Heat</span><br><span class="big-numb bold heat-risk-major">NO DATA</span><br><span class="of-properties-heat-major">available for this area</span>')
           	} else {
 
-          		$(".heat-map-link").attr("href", "risk-maps.html?state|heat|"+picked_state_fips+"|"+base_url)
+          		$(".heat-map-link").attr("href", "risk-maps.html?state%7Cheat%7C"+picked_state_fips+"%7C"+base_url)
 
           		if (filtered_data[0].pct_major == 0) {
 	          		$(".heat-risk-major").html('NO')
@@ -822,7 +822,7 @@ $(document).ready(function(){
 	          	}
 
 
-	          	$(".flood-map-link").attr("href", "risk-maps.html?state|flood|"+picked_state_fips+"|"+base_url)
+	          	$(".flood-map-link").attr("href", "risk-maps.html?state%7Cflood%7C"+picked_state_fips+"%7C"+base_url)
 
           	}
 
@@ -866,7 +866,7 @@ $(document).ready(function(){
 	          		$(".wind-risk-severe").html(filtered_data[0].pct_severe + '%')
 	          	}
 
-	          	$(".wind-map-link").attr("href", "risk-maps.html?state|wind|"+picked_state_fips+"|"+base_url)
+	          	$(".wind-map-link").attr("href", "risk-maps.html?state%7Cwind%7C"+picked_state_fips+"%7C"+base_url)
 
           	}
 
@@ -963,7 +963,7 @@ $(document).ready(function(){
           		$(".fire-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Wildfire</span><br><span class="big-numb bold wildfire-risk-major">NO DATA</span><br><span class="of-properties-fire-major">available for this area</span>')
           	} else {
 
-          		$(".fire-map-link").attr("href", "risk-maps.html?county|fire|"+picked_state_fips+"|"+picked_county_fips+"|"+base_url)
+          		$(".fire-map-link").attr("href", "risk-maps.html?county%7Cfire%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+base_url)
 
           		if (filtered_data[0].pct_major == 0) {
 	          		$(".wildfire-risk-major").html('NO')
@@ -1006,7 +1006,7 @@ $(document).ready(function(){
           		$(".heat-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Heat</span><br><span class="big-numb bold heat-risk-major">NO DATA</span><br><span class="of-properties-heat-major">available for this area</span>')
           	} else {
 
-          		$(".heat-map-link").attr("href", "risk-maps.html?county|heat|"+picked_state_fips+"|"+picked_county_fips+"|"+base_url)
+          		$(".heat-map-link").attr("href", "risk-maps.html?county%7Cheat%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+base_url)
 
           		if (filtered_data[0].pct_major == 0) {
 	          		$(".heat-risk-major").html('NO')
@@ -1052,7 +1052,7 @@ $(document).ready(function(){
           		$(".flood-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Flooding</span><br><span class="big-numb bold flood-risk-major">NO DATA</span><br><span class="of-properties-flood-major">available for this area</span>')
           	} else {
 
-          		$(".flood-map-link").attr("href", "risk-maps.html?county|flood|"+picked_state_fips+"|"+picked_county_fips+"|"+base_url)
+          		$(".flood-map-link").attr("href", "risk-maps.html?county%7Cflood%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+base_url)
 
           		if (filtered_data[0].pct_major == 0) {
 	          		$(".flood-risk-major").html('NO')
@@ -1115,7 +1115,7 @@ $(document).ready(function(){
 	          		$(".wind-risk-severe").html(filtered_data[0].pct_severe + '%')
 	          	}
 
-	          	$(".wind-map-link").attr("href", "risk-maps.html?county|wind|"+picked_state_fips+"|"+picked_county_fips+"|"+base_url)
+	          	$(".wind-map-link").attr("href", "risk-maps.html?county%7Cwind%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+base_url)
 
           	}
 
@@ -1169,7 +1169,7 @@ $(document).ready(function(){
           		$(".fire-map-link").find(".concern-title").html('<span class="lines">Wildfire</span><br><span class="big-numb bold wildfire-risk-major">NO DATA</span><br><span class="of-properties-fire-major">available for this area</span>')
           	} else {
 
-          		$(".fire-map-link").attr("href", "risk-maps.html?zip|fire|"+picked_state_fips+"|"+picked_county_fips+"|"+picked_zip+"|"+base_url)
+          		$(".fire-map-link").attr("href", "risk-maps.html?zip%7Cfire%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+picked_zip+"%7C"+base_url)
 
           		if (filtered_data[0].pct_major == 0) {
 	          		$(".wildfire-risk-major").html('NO')
@@ -1213,7 +1213,7 @@ $(document).ready(function(){
           		$(".heat-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Heat</span><br><span class="big-numb bold heat-risk-major">NO DATA</span><br><span class="of-properties-heat-major">available for this area</span>')
           	} else {
 
-          		$(".heat-map-link").attr("href", "risk-maps.html?zip|heat|"+picked_state_fips+"|"+picked_county_fips+"|"+picked_zip+"|"+base_url)
+          		$(".heat-map-link").attr("href", "risk-maps.html?zip%7Cheat%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+picked_zip+"%7C"+base_url)
 
           		if (filtered_data[0].pct_major == 0) {
 	          		$(".heat-risk-major").html('NO')
@@ -1259,7 +1259,7 @@ $(document).ready(function(){
           		$(".flood-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Flooding</span><br><span class="big-numb bold flood-risk-major">NO DATA</span><br><span class="of-properties-flood-major">available for this area</span>')
           	} else {
 
-          		$(".flood-map-link").attr("href", "risk-maps.html?zip|flood|"+picked_state_fips+"|"+picked_county_fips+"|"+picked_zip+"|"+base_url)
+          		$(".flood-map-link").attr("href", "risk-maps.html?zip%7Cflood%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+picked_zip+"%7C"+base_url)
 
           		if (filtered_data[0].pct_major == 0) {
 	          		$(".flood-risk-major").html('NO')
@@ -1321,7 +1321,7 @@ $(document).ready(function(){
 	          		$(".wind-risk-severe").html(filtered_data[0].pct_severe + '%')
 	          	}
 
-	          	$(".wind-map-link").attr("href", "risk-maps.html?zip|wind|"+picked_state_fips+"|"+picked_county_fips+"|"+picked_zip+"|"+base_url)
+	          	$(".wind-map-link").attr("href", "risk-maps.html?zip%7Cwind%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+picked_zip+"%7C"+base_url)
 
           	}    	
 
@@ -1450,7 +1450,7 @@ $(document).ready(function(){
 		          		$(".fire-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Wildfire</span><br><span class="big-numb bold wildfire-risk-major">NO DATA</span><br><span class="of-properties-fire-major">available for this area</span>')
 		          	} else {
 
-		          		$(".fire-map-link").attr("href", "risk-maps.html?state|fire|"+picked_state_fips+"|"+base_url)
+		          		$(".fire-map-link").attr("href", "risk-maps.html?state%7Cfire%7C"+picked_state_fips+"%7C"+base_url)
 
 		          		if (filtered_data[0].pct_major == 0) {
 			          		$(".wildfire-risk-major").html('NO')
@@ -1495,7 +1495,7 @@ $(document).ready(function(){
 		          		$(".heat-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Heat</span><br><span class="big-numb bold heat-risk-major">NO DATA</span><br><span class="of-properties-heat-major">available for this area</span>')
 		          	} else {
 
-		          		$(".heat-map-link").attr("href", "risk-maps.html?state|heat|"+picked_state_fips+"|"+base_url)
+		          		$(".heat-map-link").attr("href", "risk-maps.html?state%7Cheat%7C"+picked_state_fips+"%7C"+base_url)
 
 		          		if (filtered_data[0].pct_major == 0) {
 			          		$(".heat-risk-major").html('NO')
@@ -1559,7 +1559,7 @@ $(document).ready(function(){
 			          	}
 
 
-			          	$(".flood-map-link").attr("href", "risk-maps.html?state|flood|"+picked_state_fips+"|"+base_url)
+			          	$(".flood-map-link").attr("href", "risk-maps.html?state%7Cflood%7C"+picked_state_fips+"%7C"+base_url)
 
 		          	}
 
@@ -1601,7 +1601,7 @@ $(document).ready(function(){
 			          		$(".wind-risk-severe").html(filtered_data[0].pct_severe + '%')
 			          	}
 
-			          	$(".wind-map-link").attr("href", "risk-maps.html?state|wind|"+picked_state_fips+"|"+base_url)
+			          	$(".wind-map-link").attr("href", "risk-maps.html?state%7Cwind%7C"+picked_state_fips+"%7C"+base_url)
 
 		          	}
 
@@ -1692,7 +1692,7 @@ $(document).ready(function(){
 		          		$(".fire-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Wildfire</span><br><span class="big-numb bold wildfire-risk-major">NO DATA</span><br><span class="of-properties-fire-major">available for this area</span>')
 		          	} else {
 
-		          		$(".fire-map-link").attr("href", "risk-maps.html?county|fire|"+picked_state_fips+"|"+picked_county_fips+"|"+base_url)
+		          		$(".fire-map-link").attr("href", "risk-maps.html?county%7Cfire%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+base_url)
 
 		          		if (filtered_data[0].pct_major == 0) {
 			          		$(".wildfire-risk-major").html('NO')
@@ -1735,7 +1735,7 @@ $(document).ready(function(){
 		          		$(".heat-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Heat</span><br><span class="big-numb bold heat-risk-major">NO DATA</span><br><span class="of-properties-heat-major">available for this area</span>')
 		          	} else {
 
-		          		$(".heat-map-link").attr("href", "risk-maps.html?county|heat|"+picked_state_fips+"|"+picked_county_fips+"|"+base_url)
+		          		$(".heat-map-link").attr("href", "risk-maps.html?county%7Cheat%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+base_url)
 
 		          		if (filtered_data[0].pct_major == 0) {
 			          		$(".heat-risk-major").html('NO')
@@ -1780,7 +1780,7 @@ $(document).ready(function(){
 		          		$(".flood-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Flooding</span><br><span class="big-numb bold flood-risk-major">NO DATA</span><br><span class="of-properties-flood-major">available for this area</span>')
 		          	} else {
 
-		          		$(".flood-map-link").attr("href", "risk-maps.html?county|flood|"+picked_state_fips+"|"+picked_county_fips+"|"+base_url)
+		          		$(".flood-map-link").attr("href", "risk-maps.html?county%7Cflood%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+base_url)
 
 		          		if (filtered_data[0].pct_major == 0) {
 			          		$(".flood-risk-major").html('NO')
@@ -1841,7 +1841,7 @@ $(document).ready(function(){
 			          		$(".wind-risk-severe").html(filtered_data[0].pct_severe + '%')
 			          	}
 
-			          	$(".wind-map-link").attr("href", "risk-maps.html?county|wind|"+picked_state_fips+"|"+picked_county_fips+"|"+base_url)
+			          	$(".wind-map-link").attr("href", "risk-maps.html?county%7Cwind%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+base_url)
 
 		          	}
 
@@ -1889,7 +1889,7 @@ $(document).ready(function(){
 		          		$(".fire-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Wildfire</span><br><span class="big-numb bold wildfire-risk-major">NO DATA</span><br><span class="of-properties-fire-major">available for this area</span>')
 		          	} else {
 
-		          		$(".fire-map-link").attr("href", "risk-maps.html?zip|fire|"+picked_state_fips+"|"+picked_county_fips+"|"+picked_zip+"|"+base_url)
+		          		$(".fire-map-link").attr("href", "risk-maps.html?zip%7Cfire%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+picked_zip+"%7C"+base_url)
 
 		          		if (filtered_data[0].pct_major == 0) {
 			          		$(".wildfire-risk-major").html('NO')
@@ -1932,7 +1932,7 @@ $(document).ready(function(){
 		          		$(".heat-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Heat</span><br><span class="big-numb bold heat-risk-major">NO DATA</span><br><span class="of-properties-heat-major">available for this area</span>')
 		          	} else {
 
-		          		$(".heat-map-link").attr("href", "risk-maps.html?zip|heat|"+picked_state_fips+"|"+picked_county_fips+"|"+picked_zip+"|"+base_url)
+		          		$(".heat-map-link").attr("href", "risk-maps.html?zip%7Cheat%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+picked_zip+"%7C"+base_url)
 
 		          		if (filtered_data[0].pct_major == 0) {
 			          		$(".heat-risk-major").html('NO')
@@ -1977,7 +1977,7 @@ $(document).ready(function(){
 		          		$(".flood-map-link").attr("href", "index.html#begin").find(".concern-title").html('<span class="lines">Flooding</span><br><span class="big-numb bold flood-risk-major">NO DATA</span><br><span class="of-properties-flood-major">available for this area</span>')
 		          	} else {
 
-		          		$(".flood-map-link").attr("href", "risk-maps.html?zip|flood|"+picked_state_fips+"|"+picked_county_fips+"|"+picked_zip+"|"+base_url)
+		          		$(".flood-map-link").attr("href", "risk-maps.html?zip%7Cflood%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+picked_zip+"%7C"+base_url)
 
 		          		if (filtered_data[0].pct_major == 0) {
 			          		$(".flood-risk-major").html('NO')
@@ -2038,7 +2038,7 @@ $(document).ready(function(){
 			          		$(".wind-risk-severe").html(filtered_data[0].pct_severe + '%')
 			          	}
 
-			          	$(".wind-map-link").attr("href", "risk-maps.html?zip|wind|"+picked_state_fips+"|"+picked_county_fips+"|"+picked_zip+"|"+base_url)
+			          	$(".wind-map-link").attr("href", "risk-maps.html?zip%7Cwind%7C"+picked_state_fips+"%7C"+picked_county_fips+"%7C"+picked_zip+"%7C"+base_url)
 
 		          	}
 

@@ -21,21 +21,7 @@ $.fn.extend({
    }
 });
 
-	// function zipMapFilterFunction() {
-	//   var input, filter, ul, li, a, i;
-	//   input = document.getElementById("zipInputMap");
-	//   filter = input.value.toUpperCase();
-	//   div = document.getElementById("zipDropdownMap");
-	//   p = div.getElementsByTagName("p");
-	//   for (i = 0; i < p.length; i++) {
-	//     txtValue = p[i].textContent || p[i].innerText;
-	//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-	//       p[i].style.display = "";
-	//     } else {
-	//       p[i].style.display = "none";
-	//     }
-	//   }
-	// }
+
 
 
 
@@ -220,7 +206,7 @@ $(document).ready(function(){
 	var queryString = location.search.substring(1);
 	console.log(queryString)
 
-	var string_split = queryString.split("|");
+	var string_split = queryString.split("%7C");
 	console.log(string_split)
 
 	var geo_type = string_split[0];
@@ -359,7 +345,7 @@ $(document).ready(function(){
       	console.log(picked_state_name)
 
       	$(".content-location").html(picked_state_name)
-      	$(".link-to-results").attr('href', 'index.html?state|'+picked_state_fips+"|"+picked_state_name+"|"+base_url)
+      	$(".link-to-results").attr('href', 'index.html?state%7C'+picked_state_fips+"%7C"+picked_state_name+"%7C"+base_url)
 
 	} else if (geo_type == "county") {
 
@@ -387,7 +373,7 @@ $(document).ready(function(){
           	picked_county = filter_counties[0].county_name
 
           	$(".content-location").html(picked_county + ', ' + picked_state_name)
-          	$(".link-to-results").attr('href', 'index.html?county|'+picked_state_fips+"|"+picked_state_name+"|"+picked_county_fips+"|"+picked_county+"|"+base_url)
+          	$(".link-to-results").attr('href', 'index.html?county%7C'+picked_state_fips+"%7C"+picked_state_name+"%7C"+picked_county_fips+"%7C"+picked_county+"%7C"+base_url)
 
 	    });
 
@@ -438,7 +424,7 @@ $(document).ready(function(){
 	          	console.log(filter_zips)
 
 	          	$(".content-location").html(picked_zip +' - '+ picked_county + ', ' + picked_state_name)
-	          	$(".link-to-results").attr('href', 'index.html?zip|'+picked_state_fips+"|"+picked_state_name+"|"+picked_county_fips+"|"+picked_county+"|"+picked_zip+"|"+base_url)
+	          	$(".link-to-results").attr('href', 'index.html?zip%7C'+picked_state_fips+"%7C"+picked_state_name+"%7C"+picked_county_fips+"%7C"+picked_county+"%7C"+picked_zip+"%7C"+base_url)
 
 			});
 
