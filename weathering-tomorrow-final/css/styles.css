@@ -1567,6 +1567,14 @@ a:visited {
   display: none;
 }
 
+.in-line-embed {
+  width: 65%;
+  float: right;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .embed-title {
   font-family: "neuzeit-grotesk", sans-serif;
 }
@@ -1574,7 +1582,7 @@ a:visited {
 .embed-title h4 {
   font-size: 25px;
   color: #253444;
-  margin: 5px 0px;
+  margin: 5px 0px 20px 0px;
   text-shadow: -1px 1px 5px #b1b7ba;
 }
 
@@ -2642,6 +2650,12 @@ a:visited {
 
   .embed-title h4 {
     font-size: 23px;
+  }
+
+  .in-line-embed {
+    float: none;
+    width: 100%;
+    margin: 50px 0px 50px 0px;
   }
 
   .img-embed-mobile {

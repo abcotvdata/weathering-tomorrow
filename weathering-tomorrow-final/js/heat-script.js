@@ -154,6 +154,7 @@ $(document).ready(function(){ // begin document.ready block
 	// MAP SWITCHY THING
 
 	$(".map1-button").click(function(){
+
 		$(".map1").css({
 			"opacity":"1",
 			"z-index": "3000"
@@ -178,6 +179,7 @@ $(document).ready(function(){ // begin document.ready block
 	});
 
 	$(".map2-button").click(function(){
+
 		$(".map2").css({
 			"opacity":"1",
 			"z-index": "3000"
