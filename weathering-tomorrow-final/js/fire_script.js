@@ -21,7 +21,7 @@ $(document).ready(function(){ // begin document.ready block
 
         console.log(url)
 
-        $(".click-here-solutions a").attr("href",url+"14041793")
+        $(".click-here-solutions a").attr("href",url+"14041793").attr("target", "_blank")
 
 		// Use PapaParse to convert string to array of objects
     	var stories = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
