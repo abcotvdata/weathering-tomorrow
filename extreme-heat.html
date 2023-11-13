@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The extreme heat crisis threatens your health, your home and your wallet. Find out how much hotter it will get in your zip code.</title>
+
+	<!-- viewport for responsive -->	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Unprecedented heat is taking a toll on Americans' health and the economy. Type in your zip code to find out how hot your area will be by 2050.">
+    <meta name="keywords" content="climate change, extreme weather, extreme heat, dangerous heat, flooding, extreme rainfall, wildfire, property risk, property insurance, disaster, climate change disasters, hurricanes, tropical storms, wind damage, flood damage, heat related illnesses, property values">
+    
+	<!-- CSS stylesheets -->	
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="css/jqueryui.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.typekit.net/jpw5sme.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <link href="css/carousel.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+<div class="main-container"> 
+
+    <div class="header-bg-overlay"><img src="img/BACKGROUND.png"></div>
+
+    <div class="content-menu story-page-menu">
+        <div class="menu-logo">
+            <img src="img/weathering-tomorrow-logo.png">
+        </div>
+
+    </div> <!-- END MENU -->
+
+    <div class="content-header story-content-header">
+        <div class="background"><video src="media/cracked-ground2.mp4" muted autoplay loop></video></div>
+
+        <div class="story-headline">
+            <h2>The intensifying extreme heat crisis will threaten your health, your home and your wallet</h2>
+            <!-- <h3></h3> -->
+            <p>In nearly every corner of the country, unprecedented heat will change the way Americans live their lives. And it's projected to get even worse.</p>
+
+            <div class="byline">
+                By Maia Rosenfeld and Maggie Green
+            </div>
+
+            <div class="scroll-down">
+                <img src="img/scroll-down2.png">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="content">
+    	
+        <div class="story story1">
+            
+            <div class="story-text story-text1">
+                
+                <p><span class="drop-cap">T</span>here's no denying it - the last few months have been hot. This summer's unrelenting heat baked U.S. cities from coast to coast, with thousands setting new records for temperature and heat index, which also accounts for humidity. Experts at the World Meteorological Organization consider July 2023 the hottest month in Earth's recorded history, and possibly the hottest month in 120,000 years.</p>
+
+                <p>"It's not just that we're having some bad weather this summer," said Dr. John Balbus, Acting Director of the U.S. Department of Health and Human Services' new Office of Climate Change and Health Equity. "We know that this is a phenomenon associated with the overall warming of the planet."</p>
+
+                <!-- TABLE SECTION --> 
+
+                <div class="table-section">
+
+                    <div class="table-headline">
+                        <h1>How much hotter will it get where you live?</h1>
+                    </div>
+
+
+                    <div class="zip-code">
+                        <input type="text" placeholder="Type in your zip code..." class="zip-input"><button class="zip-go">Go</button>
+
+                        <label for="county" id="county-label">Choose a county:</label>
+                        <select name="county" id="counties">
+                        </select>   
+                        <button class="county-go">Go</button>
+
+                    </div>
+
+                    <div class="tryagain">
+                      <div class="tryagaintext">
+
+                        <h2>Error!</h2>
+                        <p>Please type a valid zip code</p>
+
+                        <button class="button" id="oktryagain">OK</button>
+
+                      </div>
+                    </div>
+
+                    <div class="table">
+                        
+                        <div class="row zip">
+
+                            <div class="table-title-box">
+                                <div class="table-video-wrap">
+                                        <div class="table-video-outline">
+                                            <div class="table-video">
+                                                <img src="img/cracked-ground2.jpg">
+                                            </div>
+                                        </div>
+                                        
+                                </div>
+                                <div class="table-title">
+                                    <div>Zip code <br> <span class="zip_code_display"></span></div>
+                                </div>
+                            </div>
+                            
+
+
+                            <div class="data">
+
+                                <div class="days days_90">
+                                    <div class="table-label label_90">Days above <span class="deg_90">90&deg;</span></div>
+
+                                    <div class="boxes">
+                                        <div class="today_box">
+                                            <div class="today today_90 zip_today_90"></div><div class="days_today_label">days today</div>
+                                        </div>
+
+                                        <div class="yrs30_box">
+                                            <div class="yrs30 yrs30_90 zip_30yrs_90"></div><div class="days_30yrs_label">days in 2050</div>
+                                        </div>
+
+                                        <div class="more_days_box">
+                                            <div class="more_days more_days_90 zip_more_days_90"></div><div class="more_days_label">more days</div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="days days_100">
+                                    <div class="table-label label_100">Days above <span class="deg_100">100&deg;</span></div>
+
+                                    <div class="boxes">
+                                        <div class="today_box">
+                                            <div class="today today_100 zip_today_100"></div><div class="days_today_label">days today</div>
+                                        </div>
+
+                                        <div class="yrs30_box">
+                                            <div class="yrs30 yrs30_100 zip_30yrs_100"></div><div class="days_30yrs_label">days in 2050</div>
+                                        </div>
+
+                                        <div class="more_days_box">
+                                            <div class="more_days more_days_100 zip_more_days_100"></div><div class="more_days_label">more days</div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+
+                            </div>
+
+                        </div> <!-- end row zip -->
+
+
+                        <div class="row county">
+
+                            <div class="table-title-box">
+                                <div class="table-video-wrap">
+                                        <div class="table-video-outline">
+                                            <div class="table-video">
+                                                <img src="img/cracked-ground2.jpg">
+                                            </div>
+                                        </div>
+                                        
+                                </div>
+                                <div class="table-title">
+                                    <div>County <br> <span class="county_display"></span></div>
+                                </div>
+                            </div>
+                            
+                            <!-- <div class="title">
+                                <div>County <br> <span class="county_display">NAME</span></div>
+                            </div> -->
+
+                            <div class="data">
+
+                                <div class="days days_90">
+                                    <div class="table-label label_90">Days above <span class="deg_90">90&deg;</span></div>
+
+                                    <div class="boxes">
+                                        <div class="today_box">
+                                            <div class="today today_90 county_today_90"></div><div class="days_today_label">days today</div>
+                                        </div>
+
+                                        <div class="yrs30_box">
+                                            <div class="yrs30 yrs30_90 county_30yrs_90"></div><div class="days_30yrs_label">days in 2050</div>
+                                        </div>
+
+                                        <div class="more_days_box">
+                                            <div class="more_days more_days_90 county_more_days_90"></div><div class="more_days_label">more days</div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="days days_100">
+                                    <div class="table-label label_100">Days above <span class="deg_100">100&deg;</span></div>
+
+                                    <div class="boxes">
+                                        <div class="today_box">
+                                            <div class="today today_100 county_today_100"></div><div class="days_today_label">days today</div>
+                                        </div>
+
+                                        <div class="yrs30_box">
+                                            <div class="yrs30 yrs30_100 county_30yrs_100"></div><div class="days_30yrs_label">days in 2050</div>
+                                        </div>
+
+                                        <div class="more_days_box">
+                                            <div class="more_days more_days_100 county_more_days_100"></div><div class="more_days_label">more days</div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+
+                            </div>
+
+                        </div> <!-- end row zip -->
+
+                    </div> <!-- end table -->
+
+                    <div class="source">
+                        <p>Source: <a href="https://firststreet.org/" target="_blank">First Street Foundation</a></p>
+                    </div>
+
+
+                    <div class="table-loading">
+                        <div class="table-loading-content">
+                            <div class="loading-icon">
+                                <img src="img/CLOUD-SPIN-LOADING.gif">
+                            </div>
+                            <div class="loading-text">Loading...</div>
+                        </div>
+                    </div>
+
+                </div> <!-- end table section div -->
+
+                <!-- END TABLE SECTION -->
+
+                <p>In Texas alone, towns set more than 350 new temperature records in June and July. Houston experienced its first 100-degree day in mid-June, a month earlier than usual, and strung together several more in following weeks, including a 109-degree day in late June.</p>
+
+                <p>"June was hot. July was hotter," said Houston Mayor Sylvester Turner. "August is proving to be even hotter than July, so, it's hot."</p>
+
+                <p>Across Texas, residents were warned to reduce their use of power and water because the extreme demand could threaten the utility systems. And hundreds more people went to hospital emergency rooms for heat-related illnesses than did last summer.</p>
+
+                <p>"You can see the numbers going from a baseline in the mid-spring of maybe 20 or 50 per 100,000 emergency room visits being related to heat, to numbers over 1,000," Balbus said.</p>
+
+                <p>The extreme heat and its impacts lingered for most of the summer across huge swaths of the country, with previously unheard-of temperatures: San Angelo, Texas, reached a record high of 114 degrees among a string of days above 110. Kansas City, Missouri, saw a heat index of 120 degrees in July, while nearby St. Joseph reached a heat index of 122. And Phoenix, Arizona, set the record for the hottest month on record for any city in North America with a monthly average temperature - including both daily highs and lows - of 102.7 degrees.</p>
+
+                <div class="video-box">
+                    <div class="video-title">
+                        Video: The perils of increasing heat waves
+                    </div>
+                    <div class="video">
+                        <iframe src="https://abc7.com/video/embed/?pid=13634478" scrolling="no"></iframe>
+                    </div>
+                </div>
+
+                <p>"This phenomenon that we're seeing this summer is something that is going to be recurring, year after year," Balbus said, referencing weeks-long heat advisories and hot-tub-level ocean temperatures.</p>
+
+                <p>And the heat waves ahead will be even longer than those seen today, according to scientists studying the Earth's changing climate. By 2050, U.S. communities on the southwestern Texas border and the southern tip of Florida will live with more than 125 days annually - a third of the year - that feel like 100 degrees or warmer.</p>
+
+                <div class="pull-quote">
+                    <div class="pull-quote-wrap">
+                        <div class="pull-quote-outline">
+                            <div class="pull-quote-clip">
+                                <div class="pull-quote-photo"><img src="img/cracked-ground.jpg"></div>
+                                <div class="quote-mark left-quote"><img src="img/left-quote.png"></div>
+                                <div class="quote-mark right-quote"><img src="img/right-quote.png"></div>
+                                <p class="quote">This phenomenon that we're seeing this summer is something that is going to be recurring, year after year.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="attribution">Dr. John Balbus - Acting Director of the Office of Climate Change and Health Equity</span>
+                </div>
+
+                <p>According to the National Weather Service, days where the outdoor heat index exceeds 90 degrees Fahrenheit are considered "extreme heat days," but if the heat index exceeds 103 degrees, they become "dangerous heat days," where extended time outdoors could lead to serious health impacts.</p>
+
+            </div>
+
+        </div>    
+
+    </div> <!-- END CONTENT -->  
+
+
+    <div class="scrolly-section scrolly-section-2">
+
+            <div class="scrolly-bg">
+                <div class="scrolly-map-title">
+                    <h2>Number of 100&deg; days in 30 years</h2>
+                    <div class="scrolly-map-legend">
+                        <div class="scrolly-map-legend-bar"></div>
+                        <div class="scrolly-map-legend-labels low">0</div>
+                        <div class="scrolly-map-legend-labels high">150</div>
+                    </div>
+                </div>
+                <div id="heat_map_1">
+                    <div class="scrolly-map scrolly-map1"><img src="img/scrolly-map1.png"></div>
+                    <div class="scrolly-map scrolly-map2"><img src="img/scrolly-map2.png"></div>
+                    <div class="scrolly-map scrolly-map3"><img src="img/scrolly-map3.png"></div>
+                    <div class="scrolly-map scrolly-map4"><img src="img/scrolly-map4.png"></div>
+                </div>
+            </div>
+
+            <div class="scrolly-boxes">
+
+                <div class="scrolly-box scrolly-box-3">
+                    <div class="outer-scrolly-text">
+                        <div class="scrolly-text scrolly-text-3">
+                            <p>Peer-reviewed research from the <a href="https://firststreet.org/" target="_blank">First Street Foundation</a>, a nonprofit that studies climate risk data, shows that in 30 years, the average U.S. county will see 13 more days a year with a heat index 100 degrees or higher.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scrolly-box scrolly-box-4">
+                    <div class="outer-scrolly-text">
+                        <div class="scrolly-text scrolly-text-4">
+                            <p>In addition, <span class="scrolly-outline">146 counties</span> that have never seen heat indexes at or above 100 will see at least one dangerously hot day each year by 2050.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scrolly-box scrolly-box-5">
+                    <div class="outer-scrolly-text">
+                        <div class="scrolly-text scrolly-text-5">
+                            <p>And it gets worse. Today, just <span class="scrolly-fill">50 U.S. counties</span> experience at least half a day with a max temperature index above 125 degrees.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scrolly-box scrolly-box-6">
+                    <div class="outer-scrolly-text">
+                        <div class="scrolly-text scrolly-text-6">
+                            <p>In 2050, more than <span class="scrolly-fill">1,000 counties</span> will see temperatures this hot. At this temperature, any time spent outdoors is considered potentially harmful to human health, according to the National Weather Service.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scrolly-box scrolly-box-7">
+                </div>
+                
+            </div>
+                
+
+        </div> 
+
+
+    <div class="content content2">
+
+        <div class="story story2">
+
+            <div class="story-text story-text2">
+                
+                <p>Like San Angelo, Kansas City and Phoenix, other municipalities in the South, Southwest and Midwest will see the most days with heat indexes at or above 100 degrees in 30 years. New England and other northern states will see more extreme heat days than they do today, but the temperatures won't change as dramatically. However, <a href="https://www.nature.com/articles/s41467-023-37554-1" target="_blank">research suggests</a> these places will be more vulnerable to increased extreme heat, since they haven't had to deal with high temperatures before and don't have the infrastructure to do so.</p>
+
+                <p>"We can't wait for every place to have these horrible heat waves before they start taking precautions," said Dr. Cecilia Sorensen, director of Columbia University's Global Consortium on Climate and Health Education and an associate professor at Columbia's Medical Center and School of Public Health.</p>
+
+                <p>Houston, Texas, is no stranger to high temperatures, oppressively muggy air and long stretches of extremely hot days. According to First Street Foundation data, Harris County currently experiences an average of 69 days with a heat index at or above 100 degrees. But by 2050, the county could experience nearly 100 days of that sweltering heat.</p>
+
+                <div class="pull-quote">
+                    <div class="pull-quote-wrap">
+                        <div class="pull-quote-outline">
+                            <div class="pull-quote-clip">
+                                <div class="pull-quote-photo"><img src="img/cracked-ground.jpg"></div>
+                                <div class="quote-mark left-quote"><img src="img/left-quote.png"></div>
+                                <div class="quote-mark right-quote"><img src="img/right-quote.png"></div>
+                                <p class="quote">We can't wait for every place to have these horrible heat waves before they start taking precautions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="attribution">Dr. Cecilia Sorensen - Director, Columbia University's Global Consortium on Climate and Health Education</span>
+                </div>
+
+                <p>"Climate change is real," Turner said. "And Mother Nature is not playing with anybody."</p>
+
+                <p>What's more, stretches of days with a heat index at or above 100 degrees could extend from about two weeks to a full month within 30 years. The city is planning for those days.</p>
+
+                <p>"We all have to be sensitive of the extreme weather conditions," Turner said. "We're not talking about, okay, today is 100 degrees, 103, 108, and tomorrow it's going to be a lot cooler. We're talking about each and every day where the temperature is exceeding 100 degrees."</p>
+
+                <p>The effects of dangerously hot days are compounded when the heat index exceeds 100 for longer than a day. In 30 years, consecutive stretches of 100-degree days could last up to 34 days longer than they do today along Florida's Gulf Coast, the First Street Foundation data shows.</p>
+
+                <p>On the other side of Florida, Miami-Dade County won't fare much better. The state's most populated county will experience the largest increase in the number of days with a heat index at or above 100 degrees nationwide. While Miami-Dade residents are accustomed to high temperatures, First Street Foundation data shows that within 30 years, the area will see an additional 41 days per year with a heat index above 100 - rising from approximately 50 days to three months annually. And the county could experience about 181 days - the equivalent of six months - with a heat index at or above 90 degrees, meaning residents won't get much respite from the high temperatures.</p>
+
+                <p>"We knew heat was a problem, but we realized that it is a significant one that deserves special attention," Miami-Dade County Mayor Daniella Levine Cava said.</p>
+
+                <p>Miami-Dade County is among the first local government agencies in the world to appoint a Chief Heat Officer to tackle reducing the city's carbon footprint and alleviating the effects of extreme heat, particularly on marginalized communities.</p>
+
+                <p>"We have zip codes where people are showing up to an emergency department [at a rate] three or four times higher than other zip codes," Chief Heat Officer Jane Gilbert said.</p>
+
+                <p>As the temperature gets hotter, she added, the number of heat-related deaths gradually increases.</p>
+
+                <div class="pull-quote">
+                    <div class="pull-quote-wrap">
+                        <div class="pull-quote-outline">
+                            <div class="pull-quote-clip">
+                                <div class="pull-quote-photo"><img src="img/cracked-ground.jpg"></div>
+                                <div class="quote-mark left-quote"><img src="img/left-quote.png"></div>
+                                <div class="quote-mark right-quote"><img src="img/right-quote.png"></div>
+                                <p class="quote">We knew heat was a problem, but we realized that it is a significant one that deserves special attention.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="attribution">Daniella Levine Cava - Miami-Dade County Mayor</span>
+                </div>
+
+                <p>"Once you get over a heat index of 90, it's a straight-line, gradual increase in the number of deaths per day that happen under high heat indices," Gilbert said. "You also get this lag effect. If you have three days in a row with high heat, and someone who is working outside every one of those days, and then coming home without air conditioning or a cooling environment, it's that exposure over time - It can be really dangerous."</p>
+
+                <div class="embed">
+                    
+                    <div class="embed-title">
+                        <h4>100 degree days today and in 30 years</h4>
+                        <p>In 30 years, U.S. counties will see an average of 13 more days per year with a heat index of 100&deg;F or higher. Click on the buttons below to switch between the number of 100 degree days today and in 30 years.</p>
+                    </div>
+
+                    <div class="switch-buttons">
+                        <button class="map-button map1-button">100 degree days today</button>
+                        <button class="map-button map2-button">100 degree days in 30 years</button>
+                    </div>
+
+                    <div class="map-embed">
+                        <div class="datawrapper-map map1">
+                            <div style="min-height:445px"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/fTqQO/embed.js?v=7" charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/fTqQO/full.png" alt="" /></noscript></div>
+                        </div>
+                        <div class="datawrapper-map map2">
+                            <div style="min-height:445px"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/9E6Qq/embed.js?v=8" charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/9E6Qq/full.png" alt="" /></noscript></div>
+                        </div>
+                    </div>
+
+                </div> <!-- end embed -->
+
+                <p>Communities all around the country are vulnerable to heat for different reasons, and not only during the hottest periods, Sorensen added.</p>
+
+                <p>"We see impacts due to extreme heat that occur both at the extreme ends during these large heat waves, but also at temperatures that are not necessarily classified as extreme heat waves," Sorensen said. "Everyone's affected at a different temperature."</p>
+
+                <p>With at least 94% of counties nationwide experiencing temperatures that feel like 100 degrees or hotter in 30 years - many for the first time - experts predict unprecedented health and financial consequences.</p>
+
+                <p>"This is both an immediate problem - we have it right now, people are dying right now," Balbus noted, "but we know that this is going to recur - it's going to be with us next year and the year after - and that because of climate change, the temperatures are going to trend upwards over the years and decades."</p>
+
+            </div>
+
+        </div> <!-- end story text 2 -->
+
+    </div> <!-- end content 2 -->
+
+    
+    <div class="content content3">    
+
+        <div class="story story4">
+
+            <div class="story-text story-text4">
+
+                <h3 class="story-text-subheader">Heat and Health</h3>
+                
+                <p>Extreme heat is more than just uncomfortable: sustained hot temperatures threaten communities' health and safety.</p>
+
+                <p>Heat is already responsible for the most deaths nationwide from a weather hazard, according to the National Weather Service. From 2001 through 2010, about 6,000 Americans died as a direct result of the heat, a cumulative rate of about 1.9 deaths per 100k people, data from the Centers for Disease Control and Prevention shows. The following decade, 2011-2020, saw over 8,200 heat-related deaths nationwide, with a rate of 2.5 per 100k. As the U.S. sees more dangerously hot days, experts predict this rate will increase.</p>
+
+                <p>Dr. Sorensen studies the intersection of climate change and human health. She said global warming is already taking a toll on Americans' wellbeing.</p>
+
+                <p>"We start seeing impacts even with small rises in temperature," Sorensen said. "At one degree Celsius above average seasonal temperatures, vulnerable patients start getting affected."</p>
+
+                <p>In 2019, the Agency for Health Care Research and Quality's Healthcare Cost and Utilization Project tracked 80,000 emergency room visits directly related to heat across 39 states and Washington, D.C. Sorensen has seen this phenomenon firsthand.</p>
+
+                <p>"I always brace myself going into an ER shift when it's hot out," she said. "If you're going to have a really hot week, towards the end of the week, we're going to start seeing huge, huge numbers of people coming in."</p>
+
+                <p>Heat-related illnesses range from painful to life-threatening, according to Dr. Lara Phillips, an Emergency Medicine physician at Thomas Jefferson University in Philadelphia. She has seen an increase in visits for these conditions in recent years, starting with mild heat-related cramps and then progressing to heat stroke.</p>
+
+                 <div class="embed">
+                    
+                    <div class="embed-title">
+                        <h4>Heat-Related EMS Activations in Last 30 Days</h4>
+                        <p></p>
+                    </div>
+
+                    <div class="map-embed">
+                        <div class="datawrapper-map map3">
+                            <div style="min-height:469px"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/drsGU/embed.js?v=2" charset="utf-8"></script><noscript><img src="https://datawrapper.dwcdn.net/drsGU/full.png" alt="" /></noscript></div>
+                        </div>
+                    </div>
+
+                </div> <!-- end embed -->
+
+                <p>Milder heat-related emergency department visits can be for issues like swollen limbs, fainting, dehydration and heat rashes.</p>
+
+                <p>More moderate heat-related illness comes in the form of heat exhaustion, with symptoms such as high body temperature and faster breathing. Phillips added that some people may feel dizzy or have a bad headache.</p>
+
+                <p>The deadliest form of heat-related illness is heat stroke, when a person's core body temperature rises above 103 degrees.</p>
+
+                <p>"At that point, your cellular processes cannot function," Sorensen said.</p>
+
+                <p>Someone with heat stroke may seem confused or stop making sense. Their organs will begin to fail, and they will need to be cooled down to a normal body temperature within 30 minutes to prevent irreversible damage. Without treatment, almost 80% of people with heat stroke die from it.</p>
+
+                <p>But when examining mortality associated with heat, Sorensen said, "It's not just the heat stroke deaths that we're looking at. What we see when there's heat waves is that there's a massive increase in all types of morbidity and mortality."</p>
+
+                <p>These additional types of mortality include existing heat-sensitive conditions, mental health concerns and even serious injuries.</p>
+
+                <p>"When you're exposed to heat, your cognition isn't as good, you're more likely to have accidents, slips, falls, motor vehicle accidents," Sorensen said.</p>
+
+                <p>Heat is also associated with sleep disturbances, learning difficulties and increased violence, Balbus noted. And heat exposure can contribute to severe pregnancy-related blood pressure conditions and preterm births, Sorensen added, threatening healthy pregnancies and increasing both maternal and infant mortality.</p>
+
+                <p>Heat is particularly strenuous on the heart, lungs, kidneys and brain, so heat waves can be deadly to people with chronic cardiac or respiratory disease and trigger acute health issues like kidney failure or stroke. Even common conditions like diabetes and high blood pressure put people at greater risk for heat-related health impacts, Sorensen said. More than one in 10 Americans have diabetes and nearly half have high blood pressure, National Institutes of Health and American Heart Association data show. Many common medications can also make people heat-sensitive.</p>
+
+                <p>For those who are vulnerable to heat, temperatures don't need to be extreme to be dangerous. Phillips remembers a patient with a fever and confusion coming into one of her hospital's community sites in South Philadelphia.</p>
+
+                <p>"It was hot outside, maybe upper 80s, but not the hottest it's been," she said, explaining the medical team didn't initially suspect heat-related illness. "This person was elderly, they're on multiple medications, they live by themselves, their apartment didn't have access to air conditioning, and they were very sick," Phillips said.</p>
+
+                <p>These risk factors changed their calculus: The patient was suffering from heat stroke, and he needed to be cooled down immediately. He ultimately went to the intensive care unit and with help, he recovered.</p>
+
+                <div class="pull-quote">
+                    <div class="pull-quote-wrap">
+                        <div class="pull-quote-outline">
+                            <div class="pull-quote-clip">
+                                <div class="pull-quote-photo"><img src="img/cracked-ground.jpg"></div>
+                                <div class="quote-mark left-quote"><img src="img/left-quote.png"></div>
+                                <div class="quote-mark right-quote"><img src="img/right-quote.png"></div>
+                                <p class="quote">When you're exposed to heat, your cognition isn't as good, you're more likely to have accidents, slips, falls, motor vehicle accidents.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="attribution">Dr. Cecilia Sorensen - Director, Columbia University's Global Consortium on Climate and Health Education</span>
+                </div>
+
+                <p>Societal factors also affect vulnerability to heat-related health impacts, with low-income families and some communities of color - particularly Native Americans - at increased risk. Lack of access to housing with air conditioning poses risks as well.</p>
+
+                <p>"Just like you can have food deserts, where people don't have access to the freshest produce, you can similarly have areas that don't have access to good cooling systems," Phillips said. "And these areas are not uncommonly those with potentially lower socioeconomic status."</p>
+
+                <p>Individuals should know their specific risk factors to prevent heat-related health issues, Phillips said. There are ways to reduce the chance of heat-related illness, including staying inside during the hottest times of day, wearing light clothing and sunscreen, and drinking plenty of fluids. But vulnerable populations can become ill even when taking these precautions.</p>
+
+                <p>Last summer, Sorensen saw a 75-year-old man come into the emergency room after his family found him unconscious in the backyard. He had been clearing brush all day, but said he had taken rest breaks and drunk lots of water. He grew up in Central America, so he knew about the dangers of heat, he told Sorensen. Despite these safeguards, he was still susceptible to heat exhaustion and heat syncope.</p>
+
+                <p>"People think they know what to do when it's hot out," Sorensen said. "But the heat we're experiencing is like nothing we've ever seen."</p>
+
+                <p>Communities that have not previously experienced extreme heat may see even more severe health impacts.</p>
+
+                <p>"It can affect people across age, gender and health lines," Phillips added. "And it's a prevalent problem."</p>
+
+                <p>Currently, American health systems tend to take a reactive approach to extreme heat, scrambling to protect vulnerable populations as a heat wave descends upon them, Sorensen said. But as these become more common, preventing health effects will require a proactive approach.</p>
+
+                <p>"We need more comprehensive, thought-through plans," she said, "because this century is gonna get really, really hot."</p>
+
+                <h3 class="story-text-subheader">Heat Cools the Economy</h3>
+
+                <p>When temperatures soar, business productivity plummets.</p>
+
+                <p>Approximately 4.3% of American workers spend at least two-thirds of their day outside, according to the U.S. Bureau of Labor Statistics. But when heat indexes get to extreme or dangerous levels, outdoor workers need to take more breaks or halt work for hours at a time.</p>
+
+                <p>Peter Elwin, Head of Food and Land Use for environmental think tank Planet Tracker, studies the effects of extreme heat on economic centers. By 2030, he says, productivity will decrease by <a href="https://www.ilo.org/wcmsp5/groups/public/---dgreports/---dcomm/---publ/documents/publication/wcms_711919.pdf" target="_blank">at least 0.21%</a>, the equivalent of about 389,000 full-time jobs.</p>
+
+                <p>"There's absolutely no way you can be on a construction site when the temperatures are sort of getting up that high. It just has to close," Elwin said. "You can't be going around and repairing somebody's plumbing, can't be doing electrical work. All the infrastructure, repairing the roads. So things quite quickly grind to a halt in terms of maintenance and repair."</p>
+
+                <p>In Colorado, Sorensen saw a 36-year-old agricultural worker in the emergency room. He had been driving a tractor around hot fields for 12 hours, and when he came back to the worksite people found him very confused. They brought him to the hospital, where he was diagnosed with heat stroke.</p>
+
+                <p>Sorensen's patient is not alone in his experience. Mayor Turner of Houston said outdoor workers in his city don't have any option but to work in the heat – but that doesn't mean they can't be protected.</p>
+
+                <p>"If you, for example, are a solid waste worker, you have to be out there. If you have to be out there filling these potholes or repairing these streets, you can't do that remotely," Turner said.</p>
+
+                <p>Turner added that the Texas governor signed a bill into law this June that would eliminate mandatory water breaks for outdoor workers.</p>
+
+                <p>"And can you imagine they did that this year?" Turner said. "In a year in which, across the country - quite frankly, across the globe - we are facing extreme heat conditions."</p>
+
+                <p>At the national level, Sorensen said lawmakers need to do more to protect workers.</p>
+
+                <p>"There's currently no federal standards to dictate when people should stop work at different temperatures," despite workers compensation claims increasing with exposure to heat, Sorensen said. "We need strong guidance from the federal government that applies to all industries, outdoor laborers, including agricultural workers, construction workers, but also thinking about indoor heat stress."</p>
+
+                <p>Balbus agreed, calling for a federal "heat standard" requiring employers to protect their workers from the dangers of extreme heat through access to water, breaks and cool environments.</p>
+
+                <div class="pull-quote">
+                    <div class="pull-quote-wrap">
+                        <div class="pull-quote-outline">
+                            <div class="pull-quote-clip">
+                                <div class="pull-quote-photo"><img src="img/cracked-ground.jpg"></div>
+                                <div class="quote-mark left-quote"><img src="img/left-quote.png"></div>
+                                <div class="quote-mark right-quote"><img src="img/right-quote.png"></div>
+                                <p class="quote">There's currently no federal standards to dictate when people should stop work at different temperatures.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="attribution">Dr. Cecilia Sorensen - Director, Columbia University's Global Consortium on Climate and Health Education</span>
+                </div>
+
+                <p>For indoor workers, businesses will have to hike their utility budgets to keep inside temperatures comfortable enough for workdays.</p>
+
+                <p>"If you're in some sort of, you know, relatively high-tech environment, your PC and laptop, whatever, it's all generating heat," Elwin said. "So you've actually got a heater on your desk, which is fighting the air conditioning unit above your head or below your feet."</p>
+
+                <p>According to the First Street Foundation, by 2050, U.S. residential and commercial properties will spend $288.5 billion more on air conditioning than they do now.</p>
+
+                <p>"Economically, that begins to bite," Elwin said.</p>
+
+                <p>Extreme heat events could even impact the existing infrastructure of cities, Elwin added, especially those not built to withstand high temperature events. He explained that roads could close because of soft asphalt or increased potholes, and railroad tracks could buckle, all causing bottlenecks in the supply chain.</p>
+
+                <p>"You could literally see a business go out of business in that sort of circumstance if they were, you know, unusually badly prepared, or just had a very tight supply chain," Elwin said. "It could be the ending of them."</p>
+
+                <h3 class="story-text-subheader">Bridging Gaps in Heat Impacts</h3>
+
+                <p>Experts agree: The effects of extreme heat are not equally distributed. In order to create resilient cities, they say officials need to focus on mitigating urban heat islands - areas with lots of asphalt, concrete and tall buildings with fewer green spaces, often found in low-income communities of color.</p>
+
+                <p>"Communities that have been historically redlined have been demonstrated to have higher degrees of air pollution and also worse urban heat islands and higher levels of heat exposure," Balbus said, adding that some groups are also more sensitive to the heat: "isolated elderly, children, if they're left exposed, can be more vulnerable."</p>
+
+                <p>Some health systems have used medical data to identify these at-risk patients and sent transport to bring them to cooling centers, Balbus added. </p>
+
+                <p>"The people who are most likely to suffer in the heat are the people who, for example, can't afford to pay their electric bills and have cooling," he said. "Or the people who are experiencing homelessness or who are experiencing severe mental health disorders. They are dying disproportionately and suffering disproportionately in these heat waves."</p>
+
+                <p>In theory, these deaths are preventable, Sorensen added. But averting them is difficult and will take a whole-system, proactive approach focused on communities that bear the brunt of our warming climate.</p>
+
+            </div>
+
+        </div> <!-- end story text -->
+
+
+
+        <div class="carousel-section carousel-section-abc">
+
+            <div class="content-header content-header-abc">
+                <!-- <h3>More <span class="wt-logo-small"><img src="img/weathering-tomorrow-logo.png"></span> stories:</h3> -->
+                <h3>See more reporting on the impacts of climate change from ABC Owned Television Stations</h3>
+            </div>  
+            
+            <div class="carousel content-abc">
+                <div class="carousel-row carousel-row-abc"></div>
+            </div> 
+
+        </div>
+
+        <div class="carousel-section carousel-section-tcd">
+
+            <div class="content-header content-header-tcd">
+                <!-- <h3>More <span class="wt-logo-small"><img src="img/weathering-tomorrow-logo.png"></span> stories:</h3> -->
+                <h3>Explore more climate-related solutions stories through our partnership with <a href="https://www.thecooldown.com/" target="_blank">The Cool Down</a></h3>
+            </div>  
+            
+            <div class="carousel carousel-tcd">
+                <div class="carousel-row carousel-row-tcd"></div>
+            </div> 
+
+        </div>
+
+
+        <div class="credits">
+            <div class="subhead">
+                <h3>Credits</h3>
+            </div>
+                <p>
+                    <span class="scrolltitle">Page development: </span>Grace Manthey  &nbsp; &#124; &nbsp;
+                    <span class="scrolltitle">Data analysis and reporting: </span>John Kelly, Mark Nichols, Grace Manthey, Frank Esposito, Lindsey Feingold, Maggie Green, Maia Rosenfeld  &nbsp; &#124; &nbsp;
+                    <span class="scrolltitle">Visual content producer: </span>Adriana Aguilar  &nbsp; &#124; &nbsp;
+                    <span class="scrolltitle">Video producers: </span>Justin Allen, Christopher Drew  &nbsp; &#124; &nbsp;
+                    <span class="scrolltitle">Digital production: </span>Rachel Schwartz, Alex Meier, Margeaux Jimenez, Kristen Hague  &nbsp; &nbsp;
+                    
+
+                </p>
+                
+        </div>
+
+        <p class="copywrite">&#9400; 2023 ABC Owned Television Stations </p>
+
+        <br>
+        <br>
+        <br>
+        
+
+
+    </div> <!-- END CONTENT -->
+
+
+</div> <!-- end main container -->
+
+
+<!-- JAVASCRIPT -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jqueryui.js"></script>
+    <!-- <script src="js/jquery.min.js"></script> -->
+	<script src="data/states.json"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+	<script src="js/lib/jquery.waypoints.js"></script>
+	<script src="js/lib/jquery.waypoints.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <!-- <script type="text/javascript" src="dist/leaflet.ajax.js"></script> -->
+    <script src="js/dist/leaflet.ajax.js"></script>
+    <script src="js/dist/leaflet.ajax.min.js"></script>
+	<script src="js/heat-script.js"></script>
+
+    <script>!function(){var a,n,i=window||{},s=document||{},t=0;function r(){var e=a.scrollHeight;isNaN(e)||e==t||(t=e,isNaN(t)||i.webkit&&i.webkit.messageHandlers&&i.webkit.messageHandlers.espnWebview&&i.webkit.messageHandlers.espnWebview.postMessage({callBack:null,commandName:"ABCNresize",params:{height:t}}))}function o(){var e,a;e=r,a=750,clearTimeout(n),n=setTimeout(e,a)}i.addEventListener("load",function(e){a=s.querySelector(".main-container"),o(),i.addEventListener("resize",o)})}();</script>
+  </body>
+</html>
+
