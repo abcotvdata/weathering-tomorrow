@@ -1554,6 +1554,10 @@ a:visited {
 
   }
 
+    .big-vid video {
+      width: 100%;
+    }
+
   .vid-thumbs {
     width: 100%;
     display: grid;
@@ -1566,6 +1570,10 @@ a:visited {
     cursor: pointer;
 
   }
+
+    .vid-thumb video {
+      width: 100%;
+    }
 
   /*END VIDEO GALLERY STYLING*/
 
@@ -2768,6 +2776,10 @@ a:visited {
 
   .pull-quote p {
     padding: 0px 20px;
+  }
+
+  .vid-thumbs {
+    grid-gap: 10px;
   }
 
 
