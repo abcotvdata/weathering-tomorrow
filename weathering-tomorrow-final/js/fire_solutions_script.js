@@ -12,7 +12,7 @@ $(document).ready(function(){ // begin document.ready block
 		var vid_thumb_id = $(this).attr("vid_id")
 		console.log(vid_thumb_id)
 
-		$(".big-vid").html('<video src="media/Anne-Cope-'+vid_thumb_id+'.mp4" controls></video').find("video").get(0).play()
+		$(".big-vid").html('<video src="media/Anne-Cope-'+vid_thumb_id+'.mp4" oncontextmenu="return false;" controls></video').find("video").get(0).play()
 
 	});
 
