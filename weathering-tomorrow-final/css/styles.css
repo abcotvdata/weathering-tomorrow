@@ -1592,7 +1592,8 @@ a:visited {
 .click-here-solutions {
   font-weight: 700;
   font-size: 15px;
-  background-color: #fb991b;
+/*  background-color: #fb991b;*/
+  background-color: #253444;
   color: white;
   padding: 0px;
   box-shadow: -1px 1px 5px #676767;
