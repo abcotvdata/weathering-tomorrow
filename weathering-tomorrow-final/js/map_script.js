@@ -442,12 +442,12 @@ $(document).ready(function(){
 	// L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 	// 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
 	// }).addTo(map);
-	var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-        attribution: '&copyOpenStreetMap, &copyCartoDB'
+	var positron = L.tileLayer('https://pmtiles-raster.launch.studioshare.wds.io/styles/white-abc-no_labels/{z}/{x}/{y}.png', {
+        attribution: '&copyOpenStreetMap, &copyProtomaps'
 	}).addTo(map);
 
-	var positronLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
-	    attribution: '&copyOpenStreetMap, &copyCartoDB',
+	var positronLabels = L.tileLayer('https://pmtiles-raster.launch.studioshare.wds.io/styles/abc-labels_only/{z}/{x}/{y}.png', {
+	    attribution: '&copyOpenStreetMap, &copyProtomaps',
 	    pane: 'labels'
 	}).addTo(map);
 
